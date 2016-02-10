@@ -11,7 +11,7 @@ The Laravel TCPDF service provider can be installed via [composer](http://getcom
 ```json
 {
     "require": {
-        "elibyy/laravel-tcpdf": "5.1.*"
+        "elibyy/tcpdf-laravel": "5.1.*"
     }
 }
 ```
