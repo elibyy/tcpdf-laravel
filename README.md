@@ -1,8 +1,10 @@
-# Laravel 5.0 TCPDF
+# Laravel 5.2 TCPDF
 
 A simple [Laravel 5](http://www.laravel.com) service provider with some basic configuration for including the [TCPDF library](http://www.tcpdf.org/)
 
 ### Note: The Package code is changed to avoid the confusion, this repository is a replacement to the  [old](https://github.com/elibyy/laravel-tcpdf) one 
+
+#### Note: The versions are now as laravel 5.x
 
 ## Installation
 
