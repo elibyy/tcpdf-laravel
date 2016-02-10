@@ -1,0 +1,26 @@
+{
+  "name": "elibyy/tcpdf-laravel",
+  "description": "tcpdf support for laravel 5",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "keywords": [
+	"laravel",
+	"tcpdf",
+	"pdf"
+  ],
+  "authors": [
+	{
+	  "name": "eli y",
+	  "email": "elibyy@gmail.com"
+	}
+  ],
+  "require": {
+	"illuminate/support": "5.2.x",
+	"tecnickcom/tcpdf": "6.2.9"
+  },
+  "autoload": {
+	"psr-4": {
+	  "Elibyy\\TCPDF\\": "src/"
+	}
+  }
+}
