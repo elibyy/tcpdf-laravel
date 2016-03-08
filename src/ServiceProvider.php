@@ -26,7 +26,7 @@ class ServiceProvider extends LaravelServiceProvider
 	public function register()
 	{
 		$configPath = dirname(__FILE__) . '/../config/tcpdf.php';
-		$this->mergeConfigFrom($configPath, 'laravel-tcpdf');
+		$this->mergeConfigFrom($configPath, 'tcpdf');
 		$this->app->singleton('tcpdf', function ($app) {
 			return new TCPDF($app);
 		});
