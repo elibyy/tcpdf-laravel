@@ -21,11 +21,11 @@ class TCPDF
 	public function reset()
 	{
 		$this->tcpdf = new TCPDFHelper(
-			Config::get('laravel-tcpdf.page_orientation', 'P'),
-			Config::get('laravel-tcpdf.page_unit', 'mm'),
-			static::$format ? static::$format : Config::get('laravel-tcpdf.page_format', 'A4'),
-			Config::get('laravel-tcpdf.unicode', true),
-			Config::get('laravel-tcpdf.encoding', 'UTF-8')
+			Config::get('tcpdf.page_orientation', 'P'),
+			Config::get('tcpdf.page_unit', 'mm'),
+			static::$format ? static::$format : Config::get('tcpdf.page_format', 'A4'),
+			Config::get('tcpdf.unicode', true),
+			Config::get('tcpdf.encoding', 'UTF-8')
 		);
 	}
 
