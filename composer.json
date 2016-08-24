@@ -15,7 +15,7 @@
 	}
   ],
   "require": {
-	"illuminate/support": "5.2.x",
+	"illuminate/support": "5.3.x",
 	"tecnickcom/tcpdf": "6.2.12"
   },
   "autoload": {
