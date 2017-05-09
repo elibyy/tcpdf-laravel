@@ -2,8 +2,6 @@
 
 namespace Elibyy\TCPDF;
 
-use Config;
-
 class TCPDF
 {
 	protected static $format;
@@ -21,11 +19,11 @@ class TCPDF
 	public function reset()
 	{
 		$this->tcpdf = new TCPDFHelper(
-			Config::get('tcpdf.page_orientation', 'P'),
-			Config::get('tcpdf.page_unit', 'mm'),
-			static::$format ? static::$format : Config::get('tcpdf.page_format', 'A4'),
-			Config::get('tcpdf.unicode', true),
-			Config::get('tcpdf.encoding', 'UTF-8')
+			config('tcpdf.page_orientation', 'P'),
+			config('tcpdf.page_unit', 'mm'),
+			static::$format ? static::$format : config('tcpdf.page_format', 'A4'),
+			config('tcpdf.unicode', true),
+			config('tcpdf.encoding', 'UTF-8')
 		);
 	}
 
