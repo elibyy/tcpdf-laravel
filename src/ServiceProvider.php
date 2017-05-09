@@ -70,7 +70,7 @@ class ServiceProvider extends LaravelServiceProvider
 			define('K_TCPDF_EXTERNAL_CONFIG', true);
 		}
 		foreach ($this->constantsMap as $key => $value) {
-			$value = Config::get('tcpdf.' . $value, null);
+			$value = config('tcpdf.' . $value, null);
 			if (!is_null($value) && !defined($key)) {
 				if (is_string($value) && strlen($value) == 0) {
 					continue;
