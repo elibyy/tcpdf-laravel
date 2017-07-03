@@ -33,8 +33,14 @@ Next, add the service provider to `config/app.php`.
 	//...
 	'PDF' => Elibyy\TCPDF\Facades\TCPDF::class
 ]
-
 ```
+
+for lumen you should add the following line:
+
+```php
+$app->register(Elibyy\TCPDF\ServiceProvider::class);
+```
+
 
 That's it! You're good to go.
 

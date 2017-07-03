@@ -2,7 +2,6 @@
 
 namespace Elibyy\TCPDF;
 
-use Config;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 /**
@@ -10,8 +9,7 @@ use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
  * @version 1.0
  * @package Elibyy\TCPDF
  */
-class ServiceProvider extends LaravelServiceProvider
-{
+class ServiceProvider extends LaravelServiceProvider {
 	protected $constantsMap = [
 		'K_PATH_MAIN'                   => 'path_main',
 		'K_PATH_URL'                    => 'path_url',
@@ -55,8 +53,7 @@ class ServiceProvider extends LaravelServiceProvider
 	 *
 	 * @return void
 	 */
-	public function register()
-	{
+	public function register() {
 		$configPath = dirname(__FILE__) . '/../config/tcpdf.php';
 		$this->mergeConfigFrom($configPath, 'tcpdf');
 		$this->app->singleton('tcpdf', function ($app) {
@@ -64,13 +61,12 @@ class ServiceProvider extends LaravelServiceProvider
 		});
 	}
 
-	public function boot()
-	{
+	public function boot() {
 		if (!defined('K_TCPDF_EXTERNAL_CONFIG')) {
 			define('K_TCPDF_EXTERNAL_CONFIG', true);
 		}
 		foreach ($this->constantsMap as $key => $value) {
-			$value = Config::get('tcpdf.' . $value, null);
+			$value = \config('tcpdf.' . $value, null);
 			if (!is_null($value) && !defined($key)) {
 				if (is_string($value) && strlen($value) == 0) {
 					continue;
@@ -79,11 +75,15 @@ class ServiceProvider extends LaravelServiceProvider
 			}
 		}
 		$configPath = dirname(__FILE__) . '/../config/tcpdf.php';
-		$this->publishes(array($configPath => config_path('tcpdf.php')), 'config');
+
+		$publishPath = function_exists('config_path')
+			? \config_path('tcpdf.php')
+			: app()->basePath() . '/config/tcpdf.php';
+
+		$this->publishes([$configPath => $publishPath], 'config');
 	}
 
-	public function provides()
-	{
+	public function provides() {
 		return ['pdf'];
 	}
 }
