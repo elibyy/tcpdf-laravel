@@ -3,13 +3,15 @@
 
 A simple [Laravel 5](http://www.laravel.com) service provider with some basic configuration for including the [TCPDF library](http://www.tcpdf.org/)
 
-### Note: The Package code is changed to avoid the confusion, this repository is a replacement to the  [old](https://github.com/elibyy/laravel-tcpdf) one 
+### Note: The Package code is changed to avoid the confusion, this repository is a replacement to the  [old](https://github.com/elibyy/laravel-tcpdf) one
 
 #### Note: The versions are now as laravel 5.x
 
 ## Installation
 
 The Laravel TCPDF service provider can be installed via [composer](http://getcomposer.org) by requiring the `elibyy/tcpdf-laravel` package in your project's `composer.json`. (The installation may take a while, because the package requires TCPDF. Sadly its .git folder is very heavy)
+
+Laravel 5.5+ will use auto-discovery function.
 
 ```json
 {
@@ -18,6 +20,8 @@ The Laravel TCPDF service provider can be installed via [composer](http://getcom
     }
 }
 ```
+
+If using Laravel 5.4 (or don't use auto-discovery) you will need to include the service providers / facade in app/config/app.php:
 
 Next, add the service provider to `config/app.php`.
 
