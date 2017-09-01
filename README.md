@@ -11,7 +11,7 @@ A simple [Laravel 5](http://www.laravel.com) service provider with some basic co
 
 The Laravel TCPDF service provider can be installed via [composer](http://getcomposer.org) by requiring the `elibyy/tcpdf-laravel` package in your project's `composer.json`. (The installation may take a while, because the package requires TCPDF. Sadly its .git folder is very heavy)
 
-Laravel 5.5+ will use auto-discovery function.
+Laravel 5.5+ will use the auto-discovery function.
 
 ```json
 {
@@ -21,7 +21,7 @@ Laravel 5.5+ will use auto-discovery function.
 }
 ```
 
-If using Laravel 5.4 (or don't use auto-discovery) you will need to include the service providers / facade in `config/app.php`.
+If using Laravel 5.4 (or if you don't use auto-discovery) you will need to include the service provider / facade in `config/app.php`.
 
 
 ```php
