@@ -21,9 +21,8 @@ Laravel 5.5+ will use auto-discovery function.
 }
 ```
 
-If using Laravel 5.4 (or don't use auto-discovery) you will need to include the service providers / facade in app/config/app.php:
+If using Laravel 5.4 (or don't use auto-discovery) you will need to include the service providers / facade in `config/app.php`.
 
-Next, add the service provider to `config/app.php`.
 
 ```php
 'providers' => [
