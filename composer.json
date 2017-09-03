@@ -22,5 +22,15 @@
 	"psr-4": {
 	  "Elibyy\\TCPDF\\": "src/"
 	}
+  },
+  "extra": {
+      "laravel": {
+          "providers": [
+              "Elibyy\\TCPDF\\ServiceProvider"
+          ],
+          "aliases": {
+              "PDF": "Elibyy\\TCPDF\\Facades\\TCPDF"
+          }
+      }
   }
 }
