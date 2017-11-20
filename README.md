@@ -7,6 +7,8 @@ A simple [Laravel 5](http://www.laravel.com) service provider with some basic co
 
 #### Note: The versions are now as laravel 5.x
 
+#### TCPDF is not really supported in PHP 7 but there's a plan for supporting it, check [this](https://github.com/tecnickcom/tc-lib-pdf) out.
+
 ## Installation
 
 The Laravel TCPDF service provider can be installed via [composer](http://getcomposer.org) by requiring the `elibyy/tcpdf-laravel` package in your project's `composer.json`. (The installation may take a while, because the package requires TCPDF. Sadly its .git folder is very heavy)
@@ -37,6 +39,13 @@ If you don't use auto-discovery you will need to include the service provider / 
 	'PDF' => Elibyy\TCPDF\Facades\TCPDF::class
 ]
 
+```
+
+for lumen you should add the following lines:
+
+```php
+$app->register(Elibyy\TCPDF\ServiceProvider::class);
+class_alias(Elibyy\TCPDF\Facades\TCPDF::class, 'PDF');
 ```
 
 That's it! You're good to go.
