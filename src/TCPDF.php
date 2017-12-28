@@ -20,7 +20,7 @@ class TCPDF
 	{
 		$this->tcpdf = new TCPDFHelper(
 			config('tcpdf.page_orientation', 'P'),
-			config('tcpdf.page_unit', 'mm'),
+			config('tcpdf.page_units', 'mm'),
 			static::$format ? static::$format : config('tcpdf.page_format', 'A4'),
 			config('tcpdf.unicode', true),
 			config('tcpdf.encoding', 'UTF-8')
