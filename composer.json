@@ -1,3 +1,4 @@
+
 {
   "name": "elibyy/tcpdf-laravel",
   "description": "tcpdf support for laravel 5",
@@ -15,7 +16,7 @@
 	}
   ],
   "require": {
-	"illuminate/support": "5.5.*",
+	"illuminate/support": "5.6.*",
 	"tecnickcom/tcpdf": "6.2.*"
   },
   "autoload": {
