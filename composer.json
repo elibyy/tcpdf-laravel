@@ -1,36 +1,37 @@
+
 {
-   "name":"elibyy/tcpdf-laravel",
-   "description":"tcpdf support for laravel 5",
-   "minimum-stability":"stable",
-   "license":"MIT",
-   "keywords":[
-      "laravel",
-      "tcpdf",
-      "pdf"
-   ],
-   "authors":[
-      {
-         "name":"eli y",
-         "email":"elibyy@gmail.com"
+  "name": "elibyy/tcpdf-laravel",
+  "description": "tcpdf support for laravel 5",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "keywords": [
+	"laravel",
+	"tcpdf",
+	"pdf"
+  ],
+  "authors": [
+	{
+	  "name": "eli y",
+	  "email": "elibyy@gmail.com"
+	}
+  ],
+  "require": {
+	"illuminate/support": "5.6.*",
+	"tecnickcom/tcpdf": "6.2.*"
+  },
+  "autoload": {
+	"psr-4": {
+	  "Elibyy\\TCPDF\\": "src/"
+	}
+  },
+  "extra": {
+      "laravel": {
+          "providers": [
+              "Elibyy\\TCPDF\\ServiceProvider"
+          ],
+          "aliases": {
+              "PDF": "Elibyy\\TCPDF\\Facades\\TCPDF"
+          }
       }
-   ],
-   "require":{
-      "illuminate/support":"5.5.*|5.6.*",
-      "tecnickcom/tcpdf":"6.2.*"
-   },
-   "autoload":{
-      "psr-4":{
-         "Elibyy\\TCPDF\\":"src/"
-      }
-   },
-   "extra":{
-      "laravel":{
-         "providers":[
-            "Elibyy\\TCPDF\\ServiceProvider"
-         ],
-         "aliases":{
-            "PDF":"Elibyy\\TCPDF\\Facades\\TCPDF"
-         }
-      }
-   }
+  }
 }
