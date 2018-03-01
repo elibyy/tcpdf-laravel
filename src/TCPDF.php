@@ -2,7 +2,7 @@
 
 namespace Elibyy\TCPDF;
 
-use Config;
+use Illuminate\Support\Facades\Config;
 
 class TCPDF
 {
