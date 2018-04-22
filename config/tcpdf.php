@@ -8,8 +8,13 @@ return [
 	'font_directory'        => '',
 	'image_directory'       => '',
 	'tcpdf_throw_exception' => false,
+	'use_fpdi'              => false,
+	'use_original_header'   => false,
+	'use_original_footer'   => false,
+
 	// See more info at the tcpdf_config.php file in TCPDF (if you do not set this here, TCPDF will use it default)
 	// https://raw.githubusercontent.com/tecnickcom/TCPDF/develop/config/tcpdf_config.php
+
 //    'path_main'           => '', // K_PATH_MAIN
 //    'path_url'            => '', // K_PATH_URL
 //    'header_logo'         => '', // PDF_HEADER_LOGO
