@@ -3,8 +3,9 @@
 namespace Elibyy\TCPDF;
 
 use Illuminate\Support\Facades\Config;
+use setasign\Fpdi\TcpdfFpdi;
 
-class TCPDFHelper extends \TCPDF
+class FpdiTCPDFHelper extends TcpdfFpdi
 {
     protected $headerCallback;
 
