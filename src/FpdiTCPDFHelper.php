@@ -2,8 +2,9 @@
 
 namespace Elibyy\TCPDF;
 
+use setasign\Fpdi\TcpdfFpdi;
 
-class TCPDFHelper extends \TCPDF
+class FpdiTCPDFHelper extends TcpdfFpdi
 {
     protected $headerCallback;
 
