@@ -1,11 +1,7 @@
-# Laravel 5.4 TCPDF
+# Laravel 5.6 TCPDF
 [![Latest Stable Version](https://poser.pugx.org/elibyy/tcpdf-laravel/v/stable)](https://packagist.org/packages/elibyy/tcpdf-laravel) [![Total Downloads](https://poser.pugx.org/elibyy/tcpdf-laravel/downloads)](https://packagist.org/packages/elibyy/tcpdf-laravel) [![Latest Unstable Version](https://poser.pugx.org/elibyy/tcpdf-laravel/v/unstable)](https://packagist.org/packages/elibyy/tcpdf-laravel) [![License](https://poser.pugx.org/elibyy/tcpdf-laravel/license)](https://packagist.org/packages/elibyy/tcpdf-laravel)
 
 A simple [Laravel 5](http://www.laravel.com) service provider with some basic configuration for including the [TCPDF library](http://www.tcpdf.org/)
-
-### Note: The Package code is changed to avoid the confusion, this repository is a replacement to the  [old](https://github.com/elibyy/laravel-tcpdf) one
-
-#### Note: The versions are now as laravel 5.x
 
 #### TCPDF is not really supported in PHP 7 but there's a plan for supporting it, check [this](https://github.com/tecnickcom/tc-lib-pdf) out.
 
@@ -32,11 +28,12 @@ Next, add the service provider to `config/app.php`.
 //...
 
 'aliases' => [
-	//...
-	'PDF' => Elibyy\TCPDF\Facades\TCPDF::class
+    //...
+    'PDF' => Elibyy\TCPDF\Facades\TCPDF::class
 ]
-
 ```
+
+(Please note: TCPDF cannot be used as an alias)
 
 for lumen you should add the following lines:
 
@@ -52,28 +49,29 @@ Here is a little example:
 ```php
 use PDF; // at the top of the file
 
-	PDF::SetTitle('Hello World');
-	PDF::AddPage();
-	PDF::Write(0, 'Hello World');
-	PDF::Output('hello_world.pdf');
+  PDF::SetTitle('Hello World');
+  PDF::AddPage();
+  PDF::Write(0, 'Hello World');
+  PDF::Output('hello_world.pdf');
 ```
 
 another example for generating multiple PDF's
 
 ```php
 use PDF; // at the top of the file
-	for ($i = 0; $i < 5; $i++) {
-		PDF::SetTitle('Hello World'.$i);
-		PDF::AddPage();
-		PDF::Write(0, 'Hello World'.$i);
-		PDF::Output(public_path('hello_world' . $i . '.pdf'), 'F');
-		PDF::reset();
-	}
+
+  for ($i = 0; $i < 5; $i++) {
+    PDF::SetTitle('Hello World'.$i);
+    PDF::AddPage();
+    PDF::Write(0, 'Hello World'.$i);
+    PDF::Output(public_path('hello_world' . $i . '.pdf'), 'F');
+    PDF::reset();
+  }
 ```
 
 For a list of all available function take a look at the [TCPDF Documentation](http://www.tcpdf.org/doc/code/classTCPDF.html)
 
-## Configuration
+## Configuration 
 
 Laravel-TCPDF comes with some basic configuration.
 If you want to override the defaults, you can publish the config, like so:
@@ -81,6 +79,13 @@ If you want to override the defaults, you can publish the config, like so:
     php artisan vendor:publish
 
 Now access `config/tcpdf.php` to customize.
+
+ * use_original_header is to used the original `Header()` from TCPDF.
+    * Please note that `PDF::setHeaderCallback(function($pdf){})` overrides this settings.
+ * use_original_footer is to used the original `Footer()` from TCPDF.
+    * Please note that `PDF::setFooterCallback(function($pdf){})` overrides this settings.
+ * use_fpdi is so that our internal helper will extend `TcpdfFpdi` instead of `TCPDF`.
+    * Please note fpdi is not a dependency in my project so you will have to follow their install instructions [here](https://github.com/Setasign/FPDI)  
 
 ## Header/Footer helpers
 
