@@ -79,7 +79,12 @@ class ServiceProvider extends LaravelServiceProvider
 			}
 		}
 		$configPath = dirname(__FILE__) . '/../config/tcpdf.php';
-		$this->publishes(array($configPath => config_path('tcpdf.php')), 'config');
+		if (function_exists('config_path')) {
+			$targetPath = config_path('tcpdf.php');
+		} else {
+			$targetPath = app()->basePath() . '/config/tcpdf.php';
+		}
+		$this->publishes(array($configPath => $targetPath), 'config');
 	}
 
 	public function provides()
