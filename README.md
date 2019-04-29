@@ -79,7 +79,7 @@ For a list of all available function take a look at the [TCPDF Documentation](ht
 Laravel-TCPDF comes with some basic configuration.
 If you want to override the defaults, you can publish the config, like so:
 
-    php artisan vendor:publish
+    php artisan vendor:publish --provider="Elibyy\TCPDF\ServiceProvider"
 
 Now access `config/tcpdf.php` to customize.
 
