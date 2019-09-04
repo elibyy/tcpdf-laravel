@@ -1,7 +1,7 @@
-# Laravel 5.7 TCPDF
+# Laravel 6.0 TCPDF
 [![Latest Stable Version](https://poser.pugx.org/elibyy/tcpdf-laravel/v/stable)](https://packagist.org/packages/elibyy/tcpdf-laravel) [![Total Downloads](https://poser.pugx.org/elibyy/tcpdf-laravel/downloads)](https://packagist.org/packages/elibyy/tcpdf-laravel) [![Latest Unstable Version](https://poser.pugx.org/elibyy/tcpdf-laravel/v/unstable)](https://packagist.org/packages/elibyy/tcpdf-laravel) [![License](https://poser.pugx.org/elibyy/tcpdf-laravel/license)](https://packagist.org/packages/elibyy/tcpdf-laravel)
 
-A simple [Laravel 5](http://www.laravel.com) service provider with some basic configuration for including the [TCPDF library](http://www.tcpdf.org/)
+A simple [Laravel](http://www.laravel.com) service provider with some basic configuration for including the [TCPDF library](http://www.tcpdf.org/)
 
 #### TCPDF is not really supported in PHP 7 but there's a plan for supporting it, check [this](https://github.com/tecnickcom/tc-lib-pdf) out.
 
@@ -14,7 +14,7 @@ Laravel 5.5+ will use the auto-discovery function.
 ```json
 {
     "require": {
-        "elibyy/tcpdf-laravel": "5.7.*"
+        "elibyy/tcpdf-laravel": "6.0.*"
     }
 }
 ```
