@@ -27,7 +27,9 @@ class TCPDF
             Config::get('tcpdf.page_units', 'mm'),
             static::$format ? static::$format : Config::get('tcpdf.page_format', 'A4'),
             Config::get('tcpdf.unicode', true),
-            Config::get('tcpdf.encoding', 'UTF-8')
+            Config::get('tcpdf.encoding', 'UTF-8'),
+            false, // Diskcache is deprecated
+            Config::get('tcpdf.pdfa', false)
         );
     }
 
