@@ -14,7 +14,7 @@ return [
     'pdfa'                  => false, // Options: false, 1, 3
 
     // See more info at the tcpdf_config.php file in TCPDF (if you do not set this here, TCPDF will use it default)
-    // https://raw.githubusercontent.com/tecnickcom/TCPDF/develop/config/tcpdf_config.php
+    // https://raw.githubusercontent.com/tecnickcom/TCPDF/master/config/tcpdf_config.php
 
     //    'path_main'           => '', // K_PATH_MAIN
     //    'path_url'            => '', // K_PATH_URL
