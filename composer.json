@@ -17,7 +17,7 @@
   ],
   "require": {
 	"illuminate/support": "^6.0|^7.0|^8.0",
-	"tecnickcom/tcpdf": "6.2.*|6.3.*"
+	"tecnickcom/tcpdf": "6.2.*|6.3.*|dev-master"
   },
   "autoload": {
 	"psr-4": {
