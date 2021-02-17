@@ -9,6 +9,12 @@ A simple [Laravel](http://www.laravel.com) service provider with some basic conf
 
 The Laravel TCPDF service provider can be installed via [composer](http://getcomposer.org) by requiring the `elibyy/tcpdf-laravel` package in your project's `composer.json`. (The installation may take a while, because the package requires TCPDF. Sadly its .git folder is very heavy)
 
+```
+composer require elibyy/tcpdf-laravel
+```
+
+or
+
 Laravel 5.5+ will use the auto-discovery function.
 
 ```json
