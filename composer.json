@@ -1,6 +1,6 @@
 
 {
-  "name": "elibyy/tcpdf-laravel",
+  "name": "marufmax/tcpdf-laravel",
   "description": "tcpdf support for Laravel 6, 7, 8",
   "minimum-stability": "stable",
   "license": "MIT",
