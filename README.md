@@ -20,7 +20,7 @@ Laravel 5.5+ will use the auto-discovery function.
 ```json
 {
     "require": {
-        "elibyy/tcpdf-laravel": "^8.0"
+        "elibyy/tcpdf-laravel": "^9.0"
     }
 }
 ```
