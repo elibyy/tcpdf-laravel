@@ -59,4 +59,9 @@ class TCPDFHelper extends \TCPDF
 
         parent::addHTMLTOC($page, $toc_name, $templates, $correct_align, $style, $color);
     }
+
+    public function checkPageBreak($h = 0, $y = null, $addpage = true)
+    {
+        parent::checkPageBreak($h, $y, $addpage);
+    }
 }
