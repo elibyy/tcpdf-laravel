@@ -64,4 +64,9 @@ class TCPDFHelper extends \TCPDF
     {
         parent::checkPageBreak($h, $y, $addpage);
     }
+    
+    public function getPageBreakTrigger()
+    {
+        return $this->PageBreakTrigger;
+    }
 }
