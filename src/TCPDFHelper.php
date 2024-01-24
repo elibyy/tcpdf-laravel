@@ -69,4 +69,10 @@ class TCPDFHelper extends \TCPDF
     {
         return $this->PageBreakTrigger;
     }
+
+    public function disableTcpdfLink()
+    {
+        // disable tcpdf metalink *sigh*
+        $this->tcpdflink = false;
+    }
 }

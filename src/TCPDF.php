@@ -31,6 +31,8 @@ class TCPDF
             false, // Diskcache is deprecated
             Config::get('tcpdf.pdfa', false)
         );
+
+        $this->tcpdf->disableTcpdfLink();
     }
 
     public static function changeFormat($format)
