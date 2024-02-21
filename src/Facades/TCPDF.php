@@ -1,5 +1,5 @@
 <?php
-namespace Elibyy\TCPDF\Facades;
+namespace StevenStarz\TCPDF\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

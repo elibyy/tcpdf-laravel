@@ -1,5 +1,5 @@
 {
-    "name": "elibyy/tcpdf-laravel",
+    "name": "StevenStarz/tcpdf-laravel",
     "description": "tcpdf support for Laravel 6, 7, 8, 9",
     "minimum-stability": "stable",
     "license": "MIT",
@@ -10,8 +10,8 @@
     ],
     "authors": [
         {
-            "name": "eli y",
-            "email": "elibyy@gmail.com"
+            "name": "StevenStarz",
+            "email": "stevensoh31@gmail.com"
         }
     ],
     "require": {
@@ -20,16 +20,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Elibyy\\TCPDF\\": "src/"
+            "StevenStarz\\TCPDF\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Elibyy\\TCPDF\\ServiceProvider"
+                "StevenStarz\\TCPDF\\ServiceProvider"
             ],
             "aliases": {
-                "PDF": "Elibyy\\TCPDF\\Facades\\TCPDF"
+                "PDF": "StevenStarz\\TCPDF\\Facades\\TCPDF"
             }
         }
     }

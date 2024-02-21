@@ -1,6 +1,6 @@
 <?php
 
-namespace Elibyy\TCPDF;
+namespace StevenStarz\TCPDF;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 /**
  * Class ServiceProvider
  * @version 1.0
- * @package Elibyy\TCPDF
+ * @package StevenStarz\TCPDF
  */
 class ServiceProvider extends LaravelServiceProvider
 {
