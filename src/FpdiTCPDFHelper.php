@@ -45,4 +45,10 @@ class FpdiTCPDFHelper extends TcpdfFpdi
         $this->footerCallback = $callback;
     }
 
+    public function disableTcpdfLink()
+    {
+        // disable tcpdf metalink *sigh*
+        $this->tcpdflink = false;
+    }
+
 }
