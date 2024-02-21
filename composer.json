@@ -1,5 +1,5 @@
 {
-    "name": "StevenStarz/tcpdf-laravel",
+    "name": "steven-starz/tcpdf-laravel",
     "description": "tcpdf support for Laravel 6, 7, 8, 9",
     "minimum-stability": "stable",
     "license": "MIT",
