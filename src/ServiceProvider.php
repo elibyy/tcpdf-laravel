@@ -48,7 +48,7 @@ class ServiceProvider extends LaravelServiceProvider
 		'K_TCPDF_CALLS_IN_HTML'         => 'tcpdf_calls_in_html',
 		'K_TCPDF_THROW_EXCEPTION_ERROR' => 'tcpdf_throw_exception',
 		'K_TIMEZONE'                    => 'timezone',
-        'K_ALLOWED_TCPDF_TAGS'          => 'allowed_tags',
+		'K_ALLOWED_TCPDF_TAGS'          => 'allowed_tags',
 	];
 
 	/**
