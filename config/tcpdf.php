@@ -46,4 +46,5 @@ return [
     //    'thai_topchars'       => '', // K_THAI_TOPCHARS
     //    'tcpdf_calls_in_html' => '', // K_TCPDF_CALLS_IN_HTML
     //    'timezone'            => '', // K_TIMEZONE
+    //    'allowed_tags'        => '', // K_ALLOWED_TCPDF_TAGS
 ];
