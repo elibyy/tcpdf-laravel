@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \TCPDF Cell($w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = 0, $link = '')
  * @method static \TCPDF MultiCell($w, $h, $txt, $border = 0, $align = 'J', $fill = false)
  * @method static \TCPDF Ln($h = null)
- *
+ * @mixin \TCPDF
  */
 class TCPDF extends Facade
 {
